@@ -15,4 +15,4 @@ function fib(n) {
 }
 
 //if (args[1]) process.stdout.write(fib(parseInt(args[1
-                                                   ])).toString());
+ ///                                                  ])).toString());
