@@ -1,10 +1,14 @@
 const args = process.argv;
 const str = args.slice(2).join(" ");
 
-const res = [];
+const vowels = [];
+const consonants = [];
+const digits = [];
 
-if(str.match(/[aeiouy]/ig))res.push(str.match(/[aeiouy]/ig).join(""))
-if(str.match(/[bcdfghjklmnpqrstvwxz]/ig))res.push(str.match(/[bcdfghjklmnpqrstvwxz]/ig).join(""))
-if(str.match(/[\d]/ig))res.push(str.match(/[\d]/ig).join(""))
+str.split("").forEach(char => {
+    if (/[aeiouy]/i.test(char)) vowels.push(char);
+    if (/[bcdfghjklmnpqrstvwxz]/i.test(char)) consonants.push(char);
+    if (/[\d]/.test(char)) digits.push(char);
+});
 
-if(str.length > 0)process.stdout.write(res.join(" "));
+if(str.length > 0) process.stdout.write(vowels.join("") + " " + consonants.join("") + " " + digits.join(""));
