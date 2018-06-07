@@ -13,4 +13,4 @@ function fib(n) {
     }
     return n < 0 ? b*(Math.pow(-1, n + 1)) : b;
 }
-if (args[1]) process.stdout.write(fib(parseInt(arg)));                                                  ])).toString());
+if (args[2])process.stdout.write(fib(parseInt(args[2])).toString());
