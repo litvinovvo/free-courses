@@ -1,11 +1,12 @@
 const args = process.argv;
 
 function fib(n) {
-    if (Math.abs(n) < 2) return Math.abs(n);
+    const nAbs = Math.abs(n);
+    if (nAbs < 2) return nAbs;
 
     let a = 0;
     let b = 1;
-    const nAbs = Math.abs(n)
+
     for (let i = 2; i <= nAbs; i++) {
         let c = a + b;
         a = b;
